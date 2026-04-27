@@ -1,20 +1,25 @@
 // Mobile menu toggle
-document.querySelector('.mobile-menu')?.addEventListener('click', function() {
-    const navLinks = document.querySelector('.nav-links');
-    if (navLinks.style.display === 'flex') {
-        navLinks.style.display = 'none';
-    } else {
-        navLinks.style.display = 'flex';
-        navLinks.style.flexDirection = 'column';
-        navLinks.style.position = 'absolute';
-        navLinks.style.top = '80px';
-        navLinks.style.left = '0';
-        navLinks.style.right = '0';
-        navLinks.style.backgroundColor = 'var(--luxury-dark)';
-        navLinks.style.padding = '2rem';
-        navLinks.style.gap = '1rem';
-    }
-});
+const mobileMenuBtn = document.querySelector('.mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', function() {
+        if (navLinks.style.display === 'flex') {
+            navLinks.style.display = 'none';
+        } else {
+            navLinks.style.display = 'flex';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = '80px';
+            navLinks.style.left = '0';
+            navLinks.style.right = '0';
+            navLinks.style.backgroundColor = '#0A0A0A';
+            navLinks.style.padding = '2rem';
+            navLinks.style.gap = '1rem';
+            navLinks.style.zIndex = '999';
+        }
+    });
+}
 
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -27,26 +32,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Scroll functions
+function scrollToContact() {
+    document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+}
+
+function scrollToServices() {
+    document.querySelector('#services').scrollIntoView({ behavior: 'smooth' });
+}
+
+function openEmail() {
+    window.location.href = 'mailto:cerylkeyle28@gmail.com?subject=Inquiry%20from%20CoreLink%20Website&body=Hello%20CoreLink%20Team%2C%0A%0AI%27m%20interested%20in%20learning%20more%20about%20your%20services...';
+}
+
 // Intersection Observer for fade-in animations
 const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
+    rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('visible');
         }
     });
 }, observerOptions);
 
-// Animate elements on scroll
-document.querySelectorAll('.service-card, .step, .hero-content').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+// Observe elements
+document.querySelectorAll('.service-card, .step, .hero-content, .stat-item').forEach(el => {
     observer.observe(el);
 });
 
@@ -62,21 +76,33 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Button click handlers
-document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
-    btn.addEventListener('click', () => {
-        console.log('Button clicked - Add your form or redirect logic here');
-        // You can add form modal or redirect here
+// Close mobile menu when clicking a link
+if (navLinks) {
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                navLinks.style.display = 'none';
+            }
+        });
     });
+}
+
+// Handle window resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        if (navLinks) {
+            navLinks.style.display = 'flex';
+            navLinks.style.flexDirection = 'row';
+            navLinks.style.position = 'static';
+            navLinks.style.backgroundColor = 'transparent';
+            navLinks.style.padding = '0';
+            navLinks.style.gap = '2.5rem';
+        }
+    } else {
+        if (navLinks && navLinks.style.display !== 'none' && navLinks.style.display !== 'flex') {
+            navLinks.style.display = 'none';
+        }
+    }
 });
 
-// Add a typing effect to the hero subtitle (optional)
-const subtitle = document.querySelector('.hero-subtitle');
-if (subtitle) {
-    const originalText = subtitle.innerText;
-    subtitle.style.opacity = '0';
-    setTimeout(() => {
-        subtitle.style.opacity = '1';
-        subtitle.style.transition = 'opacity 0.5s';
-    }, 500);
-}
+console.log('CoreLink Technologies - Smart Solutions. Stronger Businesses. Limitless Growth.');
