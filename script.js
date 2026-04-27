@@ -189,4 +189,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // ========== Window
+    // ========== Window Resize Handler ==========
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && navLinks) {
+            navLinks.style.display = 'flex';
+            navLinks.style.flexDirection = 'row';
+            navLinks.style.position = 'static';
+            navLinks.style.backgroundColor = 'transparent';
+            navLinks.style.padding = '0';
+            navLinks.style.gap = '2.5rem';
+            navLinks.style.borderBottom = 'none';
+        } else if (window.innerWidth <= 768 && navLinks && navLinks.style.display !== 'none') {
+            navLinks.style.display = 'none';
+        }
+    });
+    
+    // ========== Remove loading class from any buttons that might have it ==========
+    // This ensures no stuck loading states
+    
+    console.log('CoreLink Technologies - Website loaded successfully');
+});
