@@ -3,157 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corelonk | Enterprise Digital Solutions</title>
+    <title>CoreLink Technologies | Smart Solutions. Stronger Businesses. Limitless Growth.</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Luxury Navigation -->
+    <!-- Navigation -->
     <nav class="luxury-nav">
         <div class="nav-container">
             <div class="logo">
-                <span class="logo-core">Core</span><span class="logo-lonk">lonk</span>
+                <div class="logo-stacked">
+                    <span class="logo-core">Core</span><span class="logo-link">Link</span>
+                    <div class="logo-tech">TECHNOLOGIES</div>
+                </div>
                 <div class="logo-line"></div>
             </div>
             <div class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#services">Services</a>
-                <a href="#work">Work</a>
-                <a href="#insights">Insights</a>
-                <a href="#contact" class="nav-cta">Contact →</a>
+                <a href="#solutions">Solutions</a>
+                <a href="#contact" class="nav-cta">Let's Connect →</a>
             </div>
             <div class="mobile-menu">☰</div>
         </div>
     </nav>
 
-    <!-- Hero Section - Modern Startup Vibe -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-bg-gradient"></div>
         <div class="hero-content">
-            <div class="hero-label">✦ Digital Innovation Partners</div>
+            <div class="hero-badge">
+                <span>✦ INNOVATE</span>
+                <span>✦ CONNECT</span>
+                <span>✦ EMPOWER</span>
+            </div>
             <h1 class="hero-title">
-                We build systems that<br>
-                <span class="gradient-text">scale your ambition</span>
+                Smart Solutions.<br>
+                <span class="gradient-text">Stronger Businesses.</span><br>
+                Limitless Growth.
             </h1>
             <p class="hero-subtitle">
-                Luxury-grade engineering meets startup velocity.<br>
-                Websites and business systems for organizations that refuse to settle.
+                Connecting Ideas. Building Futures.
             </p>
             <div class="hero-buttons">
-                <button class="btn-primary">Launch a project →</button>
-                <button class="btn-secondary">View our work</button>
+                <button class="btn-primary" onclick="scrollToContact()">Let's Connect →</button>
+                <button class="btn-secondary" onclick="scrollToServices()">Our Services</button>
             </div>
-            <div class="hero-stats">
-                <div><span class="stat-number">50+</span><span>Clients</span></div>
-                <div><span class="stat-number">$2B+</span><span>Client value created</span></div>
-                <div><span class="stat-number">99.9%</span><span>Uptime</span></div>
+            
+            <!-- Value Pillars from your business card -->
+            <div class="value-pillars">
+                <div class="pillar">PREMIUM DESIGN</div>
+                <div class="pillar">PROFESSIONAL</div>
+                <div class="pillar">TRUST & RELIABILITY</div>
+                <div class="pillar">INNOVATION DRIVEN</div>
+                <div class="pillar">CLIENT FOCUSED</div>
+                <div class="pillar">GROWTH ORIENTED</div>
             </div>
         </div>
         <div class="hero-scroll">Scroll</div>
     </section>
 
-    <!-- Services Section - Corporate Luxury -->
+    <!-- Services Section - From your business card -->
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Capabilities</span>
-                <h2>Enterprise-grade<br>solutions</h2>
-                <p>From ambitious startups to established enterprises,<br>we engineer digital foundations that drive growth.</p>
+                <span class="section-tag">Our Expertise</span>
+                <h2>What We Deliver</h2>
+                <p>Comprehensive technology solutions for modern businesses</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">⚡</div>
-                    <h3>Web Systems</h3>
-                    <p>High-performance websites that convert visitors into customers. Built for scale, speed, and SEO.</p>
+                    <div class="service-icon">🎨</div>
+                    <h3>DESIGNS</h3>
+                    <p>Stunning, user-centered designs that captivate your audience and elevate your brand.</p>
                     <a href="#">Learn more →</a>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🏢</div>
-                    <h3>Business Automation</h3>
-                    <p>Custom internal systems that eliminate manual work and free your team to focus on growth.</p>
+                    <div class="service-icon">⚙️</div>
+                    <h3>SYSTEM DEVELOPMENT</h3>
+                    <p>Custom business systems that automate workflows and drive efficiency.</p>
                     <a href="#">Learn more →</a>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>Data Intelligence</h3>
-                    <p>Real-time dashboards and analytics that turn your business data into strategic advantage.</p>
+                    <div class="service-icon">🌐</div>
+                    <h3>WEBSITE</h3>
+                    <p>High-performance websites built to convert visitors into loyal customers.</p>
                     <a href="#">Learn more →</a>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🛡️</div>
-                    <h3>Security First</h3>
-                    <p>Bank-grade security protocols ensuring your systems and customer data remain protected.</p>
+                    <div class="service-icon">🏷️</div>
+                    <h3>BRANDING</h3>
+                    <p>Cohesive brand identities that tell your story and build recognition.</p>
+                    <a href="#">Learn more →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💼</div>
+                    <h3>IT CONSULTANCY</h3>
+                    <p>Strategic technology guidance to scale your business infrastructure.</p>
                     <a href="#">Learn more →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="process">
+    <!-- Stats/Business Info Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">KES 500M+</div>
+                    <div class="stat-label">Client Value Created</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Project Success Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process/Approach Section -->
+    <section id="solutions" class="process">
         <div class="container">
             <div class="section-header center">
-                <span class="section-tag">Methodology</span>
-                <h2>From concept to launch<br>in 30 days</h2>
+                <span class="section-tag">Our Approach</span>
+                <h2>Connecting Ideas.<br>Building Futures.</h2>
+                <p>How we transform your vision into reality</p>
             </div>
             <div class="process-steps">
                 <div class="step">
                     <div class="step-number">01</div>
                     <h3>Discovery</h3>
-                    <p>We learn your business, audience, and goals. No assumptions, just data.</p>
+                    <p>We listen, learn, and understand your unique business needs and goals.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">02</div>
-                    <h3>Design & Build</h3>
-                    <p>Luxury interfaces with startup speed. Weekly demos, never surprises.</p>
+                    <h3>Strategy</h3>
+                    <p>We craft a tailored roadmap combining design, technology, and business insights.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">03</div>
-                    <h3>Deploy & Scale</h3>
-                    <p>Launch on Vercel with CI/CD. Your system grows as you do.</p>
+                    <h3>Build & Launch</h3>
+                    <p>Agile development ensures rapid delivery without compromising quality.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <h3>Grow Together</h3>
+                    <p>Ongoing support and optimization as your business scales.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- Contact Section - With your actual contact info -->
     <section id="contact" class="cta">
         <div class="cta-content">
-            <h2>Ready to build something<br>exceptional?</h2>
-            <p>Join organizations that chose excellence over average.</p>
-            <button class="btn-primary large">Schedule a consultation →</button>
-            <div class="trust-badge">No commitment. Just a conversation.</div>
+            <div class="contact-header">
+                <span class="section-tag">Let's Connect</span>
+                <h2>Ready to build something<br>exceptional?</h2>
+            </div>
+            
+            <div class="contact-info-cards">
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h4>Phone</h4>
+                    <a href="tel:0112277706">0112277706</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h4>Email</h4>
+                    <a href="mailto:cerylkeyle28@gmail.com">cerylkeyle28@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h4>Location</h4>
+                    <p>Multiple Locations</p>
+                </div>
+            </div>
+            
+            <button class="btn-primary large" onclick="openEmail()">Get in Touch →</button>
+            <div class="trust-badge">Let's turn your ideas into reality</div>
         </div>
     </section>
 
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <span class="logo-core">Core</span><span class="logo-lonk">lonk</span>
-                <p>Building digital excellence since 2024</p>
+                <div class="logo-stacked">
+                    <span class="logo-core">Core</span><span class="logo-link">Link</span>
+                    <div class="logo-tech">TECHNOLOGIES</div>
+                </div>
+                <p>Smart Solutions. Stronger Businesses. Limitless Growth.</p>
+                <p class="tagline">Connecting Ideas. Building Futures.</p>
             </div>
             <div class="footer-links">
                 <div>
-                    <h4>Company</h4>
-                    <a href="#">About</a>
-                    <a href="#">Careers</a>
-                    <a href="#">Press</a>
+                    <h4>Services</h4>
+                    <a href="#">Designs</a>
+                    <a href="#">System Development</a>
+                    <a href="#">Websites</a>
+                    <a href="#">Branding</a>
+                    <a href="#">IT Consultancy</a>
                 </div>
                 <div>
-                    <h4>Solutions</h4>
-                    <a href="#">Web Development</a>
-                    <a href="#">Business Systems</a>
-                    <a href="#">Analytics</a>
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Our Work</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Blog</a>
                 </div>
                 <div>
                     <h4>Connect</h4>
-                    <a href="#">hello@corelonk.com</a>
-                    <a href="#">+1 (555) 123-4567</a>
-                    <a href="#">LinkedIn</a>
+                    <a href="tel:0112277706">0112277706</a>
+                    <a href="mailto:cerylkeyle28@gmail.com">cerylkeyle28@gmail.com</a>
+                    <a href="#">Multiple Locations</a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2024 Corelonk. All rights reserved.</p>
+            <p>© 2024 CoreLink Technologies. All rights reserved. | INNOVATE • CONNECT • EMPOWER</p>
         </div>
     </footer>
 
